@@ -5,19 +5,16 @@ public class DesafioSimCity {
         System.out.println("----------------------------");
         System.out.println("Seja bem-vinde ao sistema de\ncálculo de imposto de SimCity");
         System.out.println("----------------------------");
-        System.out.println("\nSou Simmy, a assistente virtual de Sim City\nComo posso te ajudar?\n");
+        System.out.println("\nSou Simmy, a assistente virtual de Sim City\nO que deseja acessar?\n");
 
-        menu();;
+        menuPrincipal();;
     }
 
-    public static void menu(){
+    public static void menuPrincipal(){
         Scanner leitor = new Scanner(System.in);
-        System.out.println("1. Cadastrar nome e profissão;");
-        System.out.println("2. Visualizar dados cadastrados;");
-        System.out.println("3. Cadastrar salários;");
-        System.out.println("4. Visualizar salários cadastrados;");
-        System.out.println("5. Calcular o imposto;");
-        System.out.println("6. Sair;");
+        System.out.println("1. Meus Dados");
+        System.out.println("2. Meus salários e Impostos");
+        System.out.println("3. Sair");
 
         System.out.println("\nDigite apenas o número da opção escolhida:");
         int numSelecionado = leitor.nextInt();
@@ -26,7 +23,10 @@ public class DesafioSimCity {
         if(numSelecionado == 1){
             cadNomeProfissa();
         }
-        else if(numSelecionado == 6){
+        else if(numSelecionado == 2){
+            showNomeProfissa();
+        }
+        else if(numSelecionado == 3){
             System.exit(0);
         }
         else{
@@ -38,8 +38,8 @@ public class DesafioSimCity {
     public static void cadNomeProfissa(){
         Scanner leitor = new Scanner(System.in);
 
-        System.out.println("Você selecionou 1. Cadastrar nome e profissão");
-        System.out.println("----------------------------------------------");
+        System.out.println("1. Cadastrar nome e profissão");
+        System.out.println("-----------------------------");
         
         System.out.println("Qual o seu nome? ");
         String nome = leitor.nextLine();
@@ -55,8 +55,26 @@ public class DesafioSimCity {
     }
 
     public static void showNomeProfissa(){
-        System.out.println("");
+        System.out.println("2. Visualizar dados cadastrados");
+        System.out.println("-------------------------------");
+        System.out.println("\n");
     }
 
+    public static void cadSalarios(){
+        Scanner leitor = new Scanner(System.in);
+        
+        System.out.println("3. Cadastrar salários");
+        System.out.println("---------------------");
+        
+        int vetorSalarios[] = new int[12];
 
+        for(int i = 0; i < 12; i++){
+            int mes = i+1;
+            System.out.println("Digite seu salário líquido do mês "+mes+" (em numero):");
+            vetorSalarios[i] = leitor.nextInt();
+        }
+        System.out.println("---------------------------------");
+        System.out.println("Salários Cadastrados com sucesso!");
+        System.out.println("---------------------------------");
+    }
 }
