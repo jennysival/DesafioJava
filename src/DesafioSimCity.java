@@ -15,9 +15,23 @@ public class DesafioSimCity {
         
         System.out.println("\nDigite apenas o número da opção escolhida:\n");
         int numSelecionado = leitor.nextInt();
+        System.out.println("1. Cadastrar nome e profissão;");
+        System.out.println("2. Visualizar dados cadastrados;");
+        System.out.println("3. Cadastrar salários;");
+        System.out.println("4. Visualizar salários cadastrados;");
+        System.out.println("5. Calcular o imposto;");
+        System.out.println("6. Sair;");
 
         if(numSelecionado == 1){
             cadNomeProfissa();
+        }
+
+        else if(numSelecionado == 6){
+            System.exit(0);
+        }
+
+        else{
+            System.out.println("Número digitado não corresponde aos disponíveis no menu, por favor comece novamente.");
         }
         
     }
@@ -25,7 +39,7 @@ public class DesafioSimCity {
     public static void cadNomeProfissa(){
         Scanner leitor = new Scanner(System.in);
 
-        System.out.println("Você selecionou 1 - Cadastrar Nome e Profissão");
+        System.out.println("Você selecionou 1. Cadastrar nome e profissão");
         System.out.println("----------------------------------------------");
         
         System.out.println("Qual o seu nome? ");
