@@ -60,7 +60,12 @@ public class DesafioSimCityFinal {
         if(opcMenuDados == 1){
         System.out.println("Dados Cadastrados: ");
         System.out.println("Nome: "+nome);
-        System.out.println("Profissão: "+profissao);}
+        System.out.println("Profissão: "+profissao);
+        System.out.println("-------------------------");
+        System.out.println("O que deseja fazer agora?");
+        System.out.println("-------------------------");
+        menuPrincipal();
+    }
 
         else if(opcMenuDados == 2){
             menuPrincipal();}
@@ -133,7 +138,12 @@ public class DesafioSimCityFinal {
                     Double calculo = (vetorSalarios[i]*28)/100;
                     System.out.println("Mês "+mes+": 28% de Imposto = "+calculo);
                 }
-        }}
+        }
+            System.out.println("-------------------------");
+            System.out.println("O que deseja fazer agora?");
+            System.out.println("-------------------------");
+            menuPrincipal();
+    }
                 else if(opcMenu2 == 2){
                 menuPrincipal();}
 
@@ -167,9 +177,10 @@ public class DesafioSimCityFinal {
                     System.out.println("Mês "+mes+": 28% de Imposto = "+calculo);
                 }
             }
-        System.out.println("-------------------------");
-        System.out.println("O que deseja fazer agora?");
-        menuPrincipal();}
+            System.out.println("-------------------------");
+            System.out.println("O que deseja fazer agora?");
+            System.out.println("-------------------------");
+            menuPrincipal();}
 
         else if(opcMenu == 3){
                 menuPrincipal();}
